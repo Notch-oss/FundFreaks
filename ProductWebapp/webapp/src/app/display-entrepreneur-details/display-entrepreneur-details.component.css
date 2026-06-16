@@ -1,0 +1,153 @@
+
+
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header-card {
+  grid-column: 1 / -1;
+  text-align: center;
+  background: linear-gradient(135deg, #a8dadc, #457b9d);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-image-card {
+  background: #e9ecef;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.profession-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  color: #2c3e50;
+}
+
+.projects-button {
+  background-color: #011627;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.projects-button:hover {
+  background-color: #ef9273;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.details-card {
+  background: #e9ecef;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.section-divider {
+  border: 2px solid #457b9d;
+  margin: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #457b9d;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 1rem;
+  color: #34495e;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  border-left: 3px solid #457b9d;
+}
+
+.about-section {
+  grid-column: 1 / -1;
+  margin: 1rem 0;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #34495e;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  border-left: 3px solid #457b9d;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-title {
+    font-size: 2rem;
+  }
+}

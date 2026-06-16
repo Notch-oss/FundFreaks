@@ -1,0 +1,25 @@
+{
+    "updateuser": [
+        {
+            "id":1,
+            "Full Name":"Pavan Kumar",
+            "Contact":987654321,
+            "Email":"pavan@gmail.com",
+            "Address":"Hyderabad"
+        },
+        {
+            "id":1,
+            "Full Name":"Rahul",
+            "Contact":987653821,
+            "Email":"rahul@gmail.com",
+            "Address":"Andhra"
+        },
+        {
+            "id":1,
+            "Full Name":"Kumar",
+            "Contact":982044321,
+            "Email":"kumar@gmail.com",
+            "Address":"Chennai"
+        }
+    ]
+}

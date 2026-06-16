@@ -1,0 +1,356 @@
+<mat-drawer-container class="fund">
+  <mat-drawer mode="side" opened class="fund2">
+    <img class="image" src="assets/images/removebg.png" />
+    <p class="para">
+      The best Startups generally come from someone needing to scratch an itch
+    </p>
+    <p class="para">- Michael Arrington, TechCrunch founder</p>
+  </mat-drawer>
+  <mat-drawer-content class="right">
+    <mat-card class="step1">
+      <mat-card-title class="test"> Update Your Profile</mat-card-title>
+    </mat-card>
+    <mat-card class="step2">
+      <mat-horizontal-stepper class="one" [linear]="true">
+        <mat-step label="Personal Details" completed="true" [stepControl]="firstFormGroup">
+          <form #form="ngForm">
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> First Name </mat-label>
+              <input
+                matInput
+                class="first"
+                required
+                placeholder="Enter Your First Name"
+                name="name"
+                [(ngModel)]="inv.name"
+              />
+            </mat-form-field>
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Last Name </mat-label>
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter Your Last Name"
+                name="lastname"
+                [(ngModel)]="inv.lastname"
+              />
+            </mat-form-field>
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+            <mat-form-field class="first" appearance="fill">
+              <mat-label>Date of birth</mat-label>
+              <input
+                matInput
+                class="first"
+                required="true"
+                [matDatepicker]="picker"
+                name="dateofBirth"
+                [(ngModel)]="inv.dateofBirth"
+              />
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle
+                class="date"
+                matSuffix
+                [for]="picker"
+                required="true"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="dropdown" appearance="fill">
+              <mat-label>Gender</mat-label>
+              <mat-select name="gender" [(ngModel)]="inv.gender" required="true">
+                <mat-option *ngFor="let fo of fos" [value]="fo.value">
+                  {{ fo.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Contact </mat-label>
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter Your Phone Number"
+                name="contact"
+                [(ngModel)]="inv.contact"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Profession </mat-label>
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter Your Profession"
+                name="profession"
+                [(ngModel)]="inv.profession"
+              />
+            </mat-form-field>
+
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+
+            <mat-label> Upload a Profile Picture </mat-label>
+
+            <div>
+              <input name="file" required="true" (change)="onSelectImg($event)" type="file" />
+              <!-- <mat-error> Upload a Profile Picture </mat-error> -->
+            </div>
+
+            <div>
+              <button mat-raised-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step label="Address Details">
+          <form #form="ngForm">
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> House No. </mat-label>
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter Your House Number"
+                name="houseno"
+                [(ngModel)]="inv.houseno"
+              />
+            </mat-form-field>
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Street No. </mat-label>
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter Your Street Number"
+                name="streetno"
+                [(ngModel)]="inv.streetno"
+              />
+            </mat-form-field>
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+
+            <mat-form-field class="second" appearance="fill">
+              <mat-label> Address </mat-label>
+              <input
+                matInput
+                class="second"
+                required="true"
+                placeholder="Enter your residential Address"
+                name="address"
+                [(ngModel)]="inv.address"
+              />
+            </mat-form-field>
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> City </mat-label>
+
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter your City Name"
+                name="city"
+                [(ngModel)]="inv.city"
+              />
+            </mat-form-field>
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> State </mat-label>
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter your State"
+                name="state"
+                [(ngModel)]="inv.state"
+              />
+            </mat-form-field>
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Pincode </mat-label>
+
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter Pincode"
+                name="pincode"
+                [(ngModel)]="inv.pincode"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Country </mat-label>
+              <input
+                matInput
+                class="first"
+                required="true"
+                placeholder="Enter Country"
+                name="country"
+                [(ngModel)]="inv.country"
+              />
+            </mat-form-field>
+
+            <div>
+              <button mat-raised-button matStepperNext>Next</button>
+              <button mat-raised-button matStepperPrevious>Back</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step label="Other Details">
+          <form #form="ngForm">
+            <mat-form-field class="first" appearance="fill">
+              <mat-label>Educational Qualification</mat-label>
+              <mat-select name="education" required="true" [(ngModel)]="inv.education">
+                <mat-option *ngFor="let foo of foos" [value]="foo.value">
+                  {{ foo.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="first" appearance="fill">
+              <mat-label>Work Experience</mat-label>
+              <mat-select name="work" required="true" [(ngModel)]="inv.work">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{ food.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Interested Category </mat-label>
+              <mat-chip-list required="true" #chipList aria-label="Fruit selection">
+                <mat-chip
+                  *ngFor="let fruit of fruits"
+                  (removed)="remove(fruit)"
+                >
+                  {{ fruit.name }}
+                  <button matChipRemove>
+                    <mat-icon>cancel</mat-icon>
+                  </button>
+                </mat-chip>
+                <input
+                  class="first"
+                  placeholder="New Category... "
+                  required="category"
+                  name="category"
+                  [(ngModel)]="inv.category"
+                  [matChipInputFor]="chipList"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur"
+                  (matChipInputTokenEnd)="add($event)"
+                />
+              </mat-chip-list>
+            </mat-form-field>
+
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Interested Location </mat-label>
+              <!-- <input matInput class="first" formControlName="location" placeholder="Enter your favourite Startup Location"> -->
+              <mat-chip-list required="true" #chipList2 aria-label="Apple selection">
+                <mat-chip
+                  *ngFor="let apple of apples"
+                  (removed)="remove2(apple)"
+                >
+                  {{ apple.name }}
+                  <button matChipRemove>
+                    <mat-icon>cancel</mat-icon>
+                  </button>
+                </mat-chip>
+                <input
+                  class="first"
+                  placeholder="New Location..."
+                  name="location"
+                  required="true"
+                  [(ngModel)]="inv.location"
+                  [matChipInputFor]="chipList2"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur"
+                  (matChipInputTokenEnd)="add2($event)"
+                />
+              </mat-chip-list>
+            </mat-form-field>
+
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Interested Stage </mat-label>
+
+              <!-- <input matInput class="first" placeholder="Enter your favourite Startup Stage"> -->
+              <mat-chip-list #chipList3 aria-label="Eye selection">
+                <mat-chip required="true" *ngFor="let eye of eyes" (removed)="remove3(eye)">
+                  {{ eye.name }}
+                  <button matChipRemove>
+                    <mat-icon>cancel</mat-icon>
+                  </button>
+                </mat-chip>
+                <input
+                  class="first"
+                  placeholder="New Stage..."
+                  name="stage"
+                  required="true"
+                  [(ngModel)]="inv.stage"
+                  [matChipInputFor]="chipList3"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur"
+                  (matChipInputTokenEnd)="add3($event)"
+                />
+              </mat-chip-list>
+            </mat-form-field>
+
+            <mat-form-field class="first" appearance="fill">
+              <mat-label> Interested Business Model </mat-label>
+
+              <!-- <input matInput class="first" formControlName="model" placeholder="Enter your favourite Startup Buisness Model"> -->
+              <mat-chip-list required="true" #chipList4 aria-label="Bye selection">
+                <mat-chip *ngFor="let bye of byes" (removed)="remove4(bye)">
+                  {{ bye.name }}
+                  <button matChipRemove>
+                    <mat-icon>cancel</mat-icon>
+                  </button>
+                </mat-chip>
+                <input
+                  class="first"
+                  placeholder="New Buisness Model..."
+                  name="model"
+                  required="true"
+                  [(ngModel)]="inv.model"
+                  [matChipInputFor]="chipList4"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur"
+                  (matChipInputTokenEnd)="add4($event)"
+                />
+              </mat-chip-list>
+            </mat-form-field>
+
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+
+            <mat-form-field class="big" appearance="fill">
+              <mat-label> About Yourself </mat-label>
+
+              <input
+                matInput
+                maxlength="300"
+                class="big"
+                required="true"
+                placeholder="Write something about yourself"
+                name="about"
+                [(ngModel)]="inv.about"
+              />
+              <mat-hint>Max length 300</mat-hint>
+            </mat-form-field>
+
+            <mat-stepper labelPosition="bottom" #stepper></mat-stepper>
+            <div>
+              <button mat-raised-button (click)="addInv()" routerLink="/InvestorNavbar/ProductList">Save</button>
+              <button mat-raised-button matStepperPrevious>Back</button>
+            </div>
+          </form>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </mat-card>
+  </mat-drawer-content>
+</mat-drawer-container>

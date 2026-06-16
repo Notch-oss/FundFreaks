@@ -1,0 +1,62 @@
+<div class="wrap">
+    <div class="row">
+        <div class="column">
+            <div>
+                <img src="https://i.ibb.co/YQpsyQq/1600w-rgn-FWdqkqm-A-removebg-preview-2-1.jpg" alt="1600w-rgn-FWdqkqm-A-removebg-preview-2-1" border="0">
+            </div>
+            <div>
+                <label class="text-center">
+                    FundFreaks<br><br>
+                    The best Startups generally come from <br>someone needing to <br>scratch an itch.<br>
+                    -Michael Arrington, TechCrunch founder
+                </label>
+            </div>
+        </div>
+        <div class="column">
+            <div class="form-container">
+                <form #form="ngForm" (ngSubmit)="registerSubmit()">
+                 <h1 style="font-weight: bold;margin-left: 10%;">Sign Up Here!</h1>
+                 <div style="font-weight: bold;" class="email">
+                 <label for="">Email</label>
+                 <input type="text" placeholder="Ex: user@gmail.com" name="Email" [(ngModel)]="user.email">
+                 </div>
+                 <div style="font-weight: bold;" class="password">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Password must contain atleast 8 characters" name="Password" [(ngModel)]="user.password">
+                </div>
+                <div style="font-weight: bold;" class="confirmPass">
+                    <label for="">Confirm Password</label>
+                    <input type="password" name="ConfirmPassword" [(ngModel)]="user.confirmPassword">
+                </div>
+                <div class="role">
+                    <h2 style="margin-left: 50%;">You wish to join as an...</h2>
+                    <div class="field">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Investor" [(ngModel)]="user.role">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    Investor
+                    </label>
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Entrepreneur" [(ngModel)]="user.role">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    Entrepreneur
+                    </label>
+                    </div>
+                </div>
+                <!-- <button *ngIf="user.role=='Entrepreneur'" routerLink="/EntrepreneurNavbar/HappyCustomers" type="submit" class="btn btn-primary">
+                    <a>  Sign Up</a>
+                  </button>
+                  <button *ngIf="user.role=='Investor'" routerLink="/InvestorNavbar/ProductList" type="submit" class="btn btn-primary">
+                      <a>  Sign Up</a>
+                  </button> -->
+
+                 <div class="button">
+                    <input type="button" class="btn btn-primary" (click)="registerSubmit()" value="Sign Up"> 
+                 </div>
+                 <span class="fs-3">
+                    <a class="link" href="Login" style="margin-left: 43%;" ><u>Login, if you've signed up already</u></a>
+                </span>
+
+                </form>
+            </div>
+        </div>
+      </div>
+</div>

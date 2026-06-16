@@ -1,0 +1,100 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="sidebar" mode="side" opened>
+      <div class="logoo"> <img src='assets/images/removebg.png' alt="1600w-rgn-FWdqkqm-A-removebg-preview-2-1" border="0">
+      </div>
+      <div>
+        <p class="headmatter">
+          The best startups generally
+          come from somebody needing to scratch
+          an itch.
+        </p>
+      </div>
+  
+    </mat-drawer>
+    <mat-drawer-content>
+  <mat-card class="card">
+  
+      <h1 class="title" mat-dialog-title>Add Idea</h1>
+  
+              <!-- [stepControl]="firstFormGroup" -->
+              <form #form="ngForm">
+                  <ng-template matStepLabel>Project Information</ng-template>
+                  <mat-form-field class="formsize" appearance="fill">
+                      <mat-label>Project Name</mat-label>
+                      <input matInput class="formsize" type="text" name="title" [(ngModel)]="product.title"
+                          placeholder=" Enter your project name*">
+                  </mat-form-field>
+  
+                  <mat-form-field class="formsize" appearance="fill">
+                      <mat-label>Category</mat-label>
+                      <mat-select  type="text" name="category" [(ngModel)]="product.category">
+                          <mat-option class="formsize" *ngFor="let category of projectCategory" [value]="category.value">
+                              {{category.viewValue}}
+                          </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+  
+                  <!-- <mat-stepper labelPosition="bottom"></mat-stepper> -->
+  
+                  <mat-form-field class="formsize" appearance="fill">
+                      <mat-label>Business Model</mat-label>
+                      <mat-select  type="text" name="businessModel" [(ngModel)]="product.businessModel">
+                          <mat-option class="formsize" *ngFor="let model of projectBusinessModel" [value]="model.value">
+                              {{model.viewValue}}
+                          </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+                  <mat-form-field class="formsize" appearance="fill">
+                      <mat-label>Project Stage</mat-label>
+                      <mat-select  type="text" name="stage" [(ngModel)]="product.stage">
+                          <mat-option class="formsize" *ngFor="let stage of projectStage" [value]="stage.value">
+                              {{stage.viewValue}}
+                          </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+  
+                  <mat-form-field class="formsize" appearance="fill">
+                      <mat-label>Location :</mat-label>
+                      <input matInput class="formsize" type="text" name="location" [(ngModel)]="product.location"
+                          placeholder="Enter Your Location*">
+                  </mat-form-field>
+                  <mat-form-field class="formsize" appearance="fill">
+                      <mat-label>Share Price(INR) :</mat-label>
+                      <input matInput class="formsize" type="text" name="sharePrice" [(ngModel)]="product.sharePrice">
+                  </mat-form-field>
+  
+  
+                  <!-- <mat-form-field class="formsize" appearance="fill">
+                      <mat-label>Listed Date</mat-label>
+                      <input matInput type="text" name="date" [(ngModel)]="product.date" [matDatepicker]="picker">
+                      <mat-hint>MM/DD/YYYY</mat-hint>
+                      <mat-datepicker-toggle class="date" matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field> -->
+  
+                  <mat-form-field class="details2" appearance="fill">
+                      <mat-label >About Your Project:</mat-label>
+                      <input matInput type="text" class="details2" maxlength="150" name="about" [(ngModel)]="product.description" placeholder="Describe  about Your Project*(maximum of 150 words) "> 
+                    </mat-form-field>
+  
+  
+  
+  
+                   <div class="documents">
+                      <mat-label> Upload Project Picture : </mat-label>
+                      <input class="picture" type="file" name="imageFile" (change)="onSelectImg($event)">
+                   </div> 
+                   <div class="documents">
+                      <mat-label> Upload Pdf: </mat-label>
+                      <input class="picture1" type="file" name="pdfFile" (change)="onSelectPdf($event)">
+                   </div> 
+                   <button  mat-button class="button" (click)="addIdea()" routerLink="/EntrepreneurNavbar/HappyCustomers">Add Idea</button>
+                   
+  
+                  <!-- <div>
+                      <button mat-button class="button" matStepperNext>Save and Continue</button>
+                  </div> -->
+  
+              </form>
+      
+  </mat-card>

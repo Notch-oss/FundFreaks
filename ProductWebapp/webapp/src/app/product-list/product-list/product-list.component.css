@@ -1,0 +1,63 @@
+.button1{
+    margin-left: 32%;
+    margin-top: -9px;
+     font-size: medium;
+     color: white;
+    background-color: #011627;
+    /* color: blue; */
+ }
+ .button1:hover{
+     color: black;
+     background-color: #ef9273;
+ }
+ .product-mat-card-list{
+     margin-top: 35vh;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;   
+     
+ }
+ .example-card {
+     max-width: 450px;
+     border: solid;
+     background-color: #f1faee;   
+   }
+ /* .align{
+     display: flex;
+     flex-direction: column;
+ } */
+ /* .page{
+     float: right;
+     margin-left: 80%;
+ } */
+ .page{
+     font-size: medium;
+     float: right;
+     margin-left: 80%;
+     margin-top: -25px;
+ }
+ .page1{
+     font-size: medium;
+     margin-top: 25px;
+     margin-left: 80%;
+ }
+ .step1{
+     text-align: center;
+     /* background: linear-gradient(to right, #dbf0d4, rgb(236, 210, 210)); */
+     /* background-color: #dbf0d4; */
+     background-color:#a8dadc;
+     margin-top: 9px;
+   }
+   .test{
+     font-size: 250%;
+   }
+   .b1{
+     float: right;
+     margin-top: -50px;
+     color: white;
+     background-color: #011627;
+   }
+   .b1:hover{
+     color: black;
+     background-color: #ef9273;
+ }

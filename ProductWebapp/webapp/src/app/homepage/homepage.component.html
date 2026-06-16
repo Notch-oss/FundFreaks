@@ -1,0 +1,134 @@
+<mat-card class="nav">
+    <img src="https://i.ibb.co/YQpsyQq/1600w-rgn-FWdqkqm-A-removebg-preview-2-1.jpg"
+        alt="1600w-rgn-FWdqkqm-A-removebg-preview-2-1" border="0" width="50" height="50">
+    <span style="font-weight:bold;">FundFreaks</span>
+    <div class="right">
+        <button mat-raised-button class="b1" (click)="onClick()" value="Login">Login</button>
+        <button mat-raised-button class="b1"(click)="onClick1()" value="Register">Register</button>
+    </div>
+</mat-card>
+<div class="bg">
+    <div *ngIf="images && images.length > 0" class="carousel-container">
+        <img *ngFor="let image of images; let i=index" [src]="image.imageSrc" [alt]="image.imageAlt"
+            [ngClass]="{'image-active': selectedIndex === i}" class="fade">
+        <!-- <div class="carousel-caption">
+        <h1 *ngFor="let image of images">
+            {{image.Caption}}
+        </h1>
+    </div> -->
+        <div *ngIf="indicators" class="carousel-dot-container">
+            <span *ngFor="let dot of images; let i=index" class="dot" [ngClass]="{'active': selectedIndex === i}"
+                (click)="selectImage(i)">
+            </span>
+        </div>
+
+        <button *ngIf="controls" class="btn-carousel btn-prev" (click)="onPrevClick()">
+            <i class="fas fa-arrow-circle-left icon-carousel icon-prev"></i>
+        </button>
+        <button *ngIf="controls" class="btn-carousel btn-next" (click)="onNextClick()">
+            <i class="fas fa-arrow-circle-right icon-carousel icon-next"></i>
+        </button>
+    </div>
+    <mat-drawer-container class="container">
+        <mat-drawer mode="side" opened class="left">
+            <img src="assets/images/money.png" style="width: 100%; height: 100%">
+        </mat-drawer>
+        <mat-drawer-content>
+            <p class="fund">Looking for Funds?</p>
+            <p class="p"> Good Investors are hard to find?</p>
+            <p class="p"> Want to take inspiration from others ideas?</p>
+            <p class="p2">
+                Get your products funded, just register and add details about yourself and
+                your product to let the investors know about you and your product.
+                Improve your product and your skills by browsing through other products listed on our website.
+            </p>
+        </mat-drawer-content>
+    </mat-drawer-container>
+
+    <mat-drawer-container class="container">
+        <mat-drawer mode="side" opened class="left">
+            <p class="fund2">Looking to Invest?</p>
+            <p class="q"> Promising Products are hard to find?</p>
+            <p class="q"> Want to invest in new unique ideas?</p>
+            <p class="q2">
+                Browse through some of the best promising products and innovative ideas,
+                just register yourself and start investing based on your favourite category,
+                location, stage or buisness model through our recommendation page.
+            </p>
+        </mat-drawer>
+        <mat-drawer-content>
+            <img src="assets/images/money.jpg" style="width: 100%; height: 100%;">
+        </mat-drawer-content>
+    </mat-drawer-container>
+    <h1 class="feature"> Our Features</h1>
+    <div class="align">
+        <mat-card class="card" [class.mat-elevation-z0]="!isActive" [class.mat-elevation-z24]="isActive"
+            (click)="isActive = !isActive">
+            <img src="assets/images/communication.jpeg" style="width: 100%; height: 70%;">
+            <p class="ct">Happy Customers</p>
+            <p class="ct2">The most satisfactory place for entrepreneurs to showcase their ideas and get funded</p>
+        </mat-card>
+        <mat-card class="card" [class.mat-elevation-z0]="!isActive" [class.mat-elevation-z24]="isActive"
+            (click)="isActive = !isActive">
+            <img src="assets/images/design.jpeg" style="width: 100%; height: 70%;">
+            <p class="ct">Recommendations</p>
+            <p class="ct2">Get product recommendations according to investors choice based on location, category, stage and business model.</p>
+        </mat-card>
+        <mat-card class="card" [class.mat-elevation-z0]="!isActive" [class.mat-elevation-z24]="isActive"
+            (click)="isActive = !isActive">
+            <img src="assets/images/happy.jpeg" style="width: 100%; height: 70%;">
+            <p class="ct">Communication</p>
+            <p class="ct2">If interested then connect investors and entrepreneurs through a mail notification instantly</p>
+        </mat-card>
+    </div>
+    <h1 class="feature"> About FundFreaks </h1>
+    <mat-drawer-container class="container">
+        <mat-drawer mode="side" opened class="left">
+            <img src="assets/images/about.jpg" style="width: 100%; height: 100%;">
+
+        </mat-drawer>
+        <mat-drawer-content>
+            <p class="para">
+                FundFreaks is an up and coming start-up community in the world which provides an extraordinary
+                opportunity to get in front of some investors in your space for both funding through Fundable and
+                mentoring.</p>
+            <p class="para2">
+                FundFreaks provide you with access to many different types of investor – from the general public with an
+                interest to participate in the “next big thing” to philanthropists who believe in helping others realize
+                their dream, to accredited investors seeking new ideas to fund such as OurCrowd.
+            </p>
+        </mat-drawer-content>
+    </mat-drawer-container>
+    <mat-divider class="div1"></mat-divider>
+    <footer>
+        <div class="d1">
+            <p class="foot"> Home </p>
+            <p class="foot"> Services </p>
+            <p class="foot"> About </p>
+            <p class="foot"> Terms </p>
+            <p class="foot"> Privacy Policy</p>
+        </div>
+        <mat-divider class="div2"></mat-divider>
+        <p class="p3">
+            FundFreaks in the solution to for people having ideas or Projects but lacking funds and also the people who
+            are ready to invest but find it hard to find good projects and ideas by bringing them together under one
+            website and helping them to communicate with each other.
+        </p>
+        <mat-divider class="div3"></mat-divider>
+        <p class="p4">
+            Follow Us
+        </p>
+        <div class="d2">
+            <img src="assets/icons/instagram.svg" style="width:3%;">
+            <img src="assets/icons/facebook.svg" style="width: 3%;">
+            <img src="assets/icons/twitter.svg" style="width: 3%;">
+            <img src="assets/icons/whatsapp.svg" style="width: 3%;">
+
+        </div>
+        <div class="d4">
+            <p>fundfreaks@gmail.com</p>
+            <img src="assets/icons/copyright.svg" style="width: 1.5%;">
+            COPYRIGHT FUNDFREAKS 2022. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,311 @@
+.nav{
+  background-color: #011627;
+  border-bottom: 1px white solid;
+}
+.nav img{
+margin-left: 15px;
+}
+span{
+  color: white;
+  font-size: 250%;
+  margin-left: 1%;
+  margin-top: .8%;
+}
+.right{
+margin-left: auto;
+}
+.b1{
+background-color: #011627;
+background-repeat: no-repeat;
+border: solid;
+cursor:pointer;
+overflow: auto;
+color: white;
+margin-left: 10px;
+margin-top: 5px;
+}
+.b1:hover {
+  background-color: green;
+  background-repeat: no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: auto;
+  outline:none;
+}
+.carousel-container{
+  position: relative;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px #011627;
+}
+.carousel-container img{
+  display: none;
+  border-radius: 15px;
+}
+.carousel-container img.image-active {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+.carousel-dot-container{
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.dot{
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.6s ease;
+  opacity: 0.5;
+}
+
+.active,
+.dot:hover {
+  opacity: 1;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from{
+      opacity: 0.4;
+  }
+  to {
+      opacity: 1;
+  }
+  
+}
+
+.btn-carousel{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: white;
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-prev {
+  left: 0;
+}
+
+.btn-next{
+  right: 0;
+}
+
+.icon-carousel {
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.01s ease;
+}
+
+.icon-carousel :hover {
+  opacity: 0.9;
+}
+
+.icon-carousel :active {
+  opacity: 0.5;
+}
+
+.icon-prev {
+  font-size: 35px;
+}
+
+.icon-next {
+  font-size: 35px;
+}
+
+.container {
+  width: 100%;
+  height: 350px;
+  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background: #011627;
+}
+.left {
+  width: 50%;
+  background: #011627;
+}
+.feature{
+  text-align: center;
+  font-size: 50px;
+  padding-top: 2%;
+  color: white;
+  margin-bottom: 25px;
+}
+.card{
+  display: inline-block;
+  margin: auto;
+  background: #a8dadc;
+  width: 500px;
+  height: 350px;
+}
+.card:hover{
+display: inline-block;
+  /* background:#00838d; */
+  /* transition: all 0.3s ease-out; */
+  box-shadow: 0 6px 12px white;
+  border-right: #a8dadc 8px solid;
+  border-bottom: #a8dadc 4px solid;
+}
+.align{
+text-align: center;
+}
+.ct{
+font-size: large;
+margin-top: 5px;
+text-align: center;
+font-weight: bold;
+}
+.bg{
+  background-color:#011627;
+}
+.fund{
+text-align: left;
+margin-left: 30px;
+font-size: 30px;
+margin-top: 40px;
+margin-bottom: 5%;
+color: white;
+}
+.fund2{
+text-align: left;
+font-size: 30px;
+margin-top: 40px;
+margin-bottom: 5%;
+color: white;
+}
+.para{
+color: white;
+margin-left: 30px;
+text-align: left;
+padding-top: 6%;
+font-size: 20px;
+line-height: 30px;
+}
+.para2{
+color: white;
+margin-left: 30px;
+text-align: left;
+font-size: 20px;
+line-height: 30px;
+padding-top: 2%;
+}
+.p{
+color: white;
+margin-left: 30px;
+text-align: left;
+font-size: large;
+}
+.q{
+color: white;
+text-align: left;
+font-size: large;
+}
+.p2{
+color: white;
+margin-left: 30px;
+text-align: left;
+font-size: large;
+margin-top: 5%;
+line-height: 25px;
+}
+.q2{
+color: white;
+text-align: left;
+font-size: large;
+margin-top: 5%;
+line-height: 25px;
+}
+.p3{
+color: white;
+text-align: center;
+margin-top: 1%;
+font-size: large;
+margin-left: 1%;
+margin-right: 1%;
+line-height: 25px;
+}
+.p4{
+text-align: center;
+color: white;
+margin-top: 1%;
+font-size: larger;
+}
+.div1{
+border-color: white;
+border-width: 5px;
+width: 95%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2%;
+}
+.div2{
+border-color: white;
+border-width: 2px;
+width: 55%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.div3{
+border-color: white;
+border-width: 2px;
+width: 75%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+.foot{
+display: inline-flex;
+color: white;
+margin-left:20px;
+}
+.d1{
+text-align: center;
+margin-top: 2%;
+margin-bottom: 1%;
+}
+.d2{
+text-align: center;
+}
+.d2 img{
+margin: 15px;
+}
+.d4{
+margin-top: 2%;
+text-align: center;
+color: white;
+}
+.d4 img{
+margin-right: .6%;
+}
+.feat{
+display: inline-block;
+}

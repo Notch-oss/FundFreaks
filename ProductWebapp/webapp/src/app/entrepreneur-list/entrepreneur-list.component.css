@@ -1,0 +1,50 @@
+.step1{
+    text-align: center;
+    background-color: #a8dadc;
+    margin-top: 5px;
+    
+  }
+.product-mat-card-list{
+    margin-top: 35vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.example-card {
+
+    max-width: 450px;
+    border: solid;
+    background-color: #f1faee;
+   
+  }
+
+
+.page{
+    font-size: medium;
+    float: right;
+    margin-left: 80%;
+    margin-top: -25px;
+}
+.page1{
+    font-size: medium;
+    margin-top: 25px;
+    margin-left: 83%;
+}
+button{
+    color: white;
+    background-color:#011627;
+}
+body{
+    background-color:white;
+    
+}
+
+mat-list-item{
+    text-align: center;
+}
+
+.button1:hover{
+    color: black;
+    background-color: #ef9273;
+}

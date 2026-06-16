@@ -1,0 +1,80 @@
+
+ <!-- Investor -->
+ <mat-sidenav-container class="example-container" >
+    <mat-sidenav #sidenav [mode]="'over'">
+  
+      <p><button mat-button (click)="sidenav.toggle()">
+        <div class="logoo"> <img src="https://i.ibb.co/YQpsyQq/1600w-rgn-FWdqkqm-A-removebg-preview-2-1.jpg" alt="1600w-rgn-FWdqkqm-A-removebg-preview-2-1" border="0">
+      </div></button></p>
+      <h4>FundFreaks</h4>
+      <mat-nav-list>
+        <div class="fit">
+          <button class="side" routerLink="/InvestorNavbar/ProductList">
+           <img src="https://img.icons8.com/fluency/48/000000/growing-money.png"/>
+           <a>Startup Ideas</a>
+         
+        </button></div>
+        <div class="fit">
+            <button class="side" routerLink="/InvestorNavbar/Recommendations">
+                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-recommendations-marketing-agency-flaticons-lineal-color-flat-icons.png"/>
+              <a >Recommendtions</a>
+           </button>
+            </div>
+           
+            <div class="fit">
+           <button class="side" routerLink="/InvestorNavbar/UpdateProfileInvestor">
+            <img src="https://img.icons8.com/dusk/64/000000/approve-and-update.png"/>
+            <a >Update Profile</a>
+         </button></div>
+        
+         <div class="fit">
+          <button routerLink="/InvestorNavbar/EnterpreneurList" class="side">
+            <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-entrepreneurship-gig-economy-flaticons-flat-flat-icons.png"/>
+           <a >Entrepreneurs</a>
+        </button></div>
+           
+       <div class="fit">
+       <button class="side" routerLink="/InvestorNavbar/InvestorList">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/000000/external-investor-seo-flatart-icons-flat-flatarticons.png"/>
+        <a >Investors</a>
+      </button>
+       </div>
+
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+        <mat-toolbar>
+      <p><button mat-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button></p>
+  
+      <img src="https://i.ibb.co/YQpsyQq/1600w-rgn-FWdqkqm-A-removebg-preview-2-1.jpg" alt="1600w-rgn-FWdqkqm-A-removebg-preview-2-1" border="0">
+        <span class="name">FundFreaks</span>
+        <button class="avatar1" [matMenuTriggerFor]="menu">
+          <img src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-businessman-leadership-justicon-lineal-justicon-14.png"/>
+        </button>
+        
+          <mat-menu #menu="matMenu">
+            <h5 class="one">
+              Hi {{display1() | titlecase}}
+             
+            </h5>
+          <!-- <button mat-menu-item class="m">
+            <div>
+              <img class="profile" src="https://img.icons8.com/clouds/100/000000/test-account.png"/>
+              <span><a class="logout1" href="">Profile</a></span>
+            </div>
+          </button> -->
+          <button mat-menu-item class="m" (click)="clearLocal()">
+            <!-- <div > -->
+            <mat-icon class="logoutt">logout</mat-icon>
+            <span><a class="logout1" href="Login">Logout</a></span>
+            <!-- </div> -->
+          </button>
+        </mat-menu>
+
+      </mat-toolbar>
+  <router-outlet></router-outlet>
+      
+      

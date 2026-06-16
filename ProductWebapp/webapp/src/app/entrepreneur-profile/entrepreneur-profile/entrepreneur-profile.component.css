@@ -1,0 +1,139 @@
+.details2{
+  font-size: 110%;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 92%;
+  height: 170px;
+}
+.formsize{
+  font-size: 100%;
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 45%;
+}
+
+.headmatter{
+  color:aliceblue;
+  text-align: center;
+  font-size: 20px;
+  margin: 60px;
+}
+.title{
+  text-align: center;
+  font-size: 30px;
+  background-color: #a8dadc;
+  /* background: linear-gradient(to right, rgba(122, 10, 214, 0.5), rgba(10, 179, 213, 0.5)); */
+}
+.mat-stepper-horizontal {
+  border: solid ;
+
+}
+.mat-label{
+  margin-left: 50px;
+}
+   /* .details{
+    font-size: large;
+    margin-left: 10px;
+    margin-top: 15px;
+    display: inline-block;
+    padding-top: 35px;
+    width: 200px;
+    text-align: right;
+  } */
+  /* .details1{
+    margin-left: 12px;
+    font-size: large;
+    text-align: left;
+    margin-top: 10px;
+  }   */
+ .mat-card{
+    border :solid #c5d4c0 20px;
+   margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  button{
+    background-color: #011627;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    float: right;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: large;
+  }  
+.button:hover{
+   color: black;
+   background-color: #ef9273;
+}
+
+  .button1{
+    background-color: #011627;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    float: right;
+    margin-top: 45px;
+    margin-left: 10px;
+    font-size: large;
+  }
+  .button1:hover{
+    color: black;
+    background-color: #ef9273;
+}
+
+  .button2{
+    background-color: #011627;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    float: right;
+    margin-top: 97px;
+    margin-left: 10px;
+    font-size: large;
+  }
+  .button2:hover{
+    color: black;
+    background-color: #ef9273;
+}
+
+  .example-radio-group {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    align-items: flex-start;
+    font-size: large;
+    margin-left: 150px;
+    padding-top: 35px;
+  }
+  .example-container {
+    border: 1px solid #555;
+  }
+  .sidebar{
+    width: 28%;
+    /* background-color: #011627; */
+    background-color: #457b9d;
+  }
+  .image{
+    width: 100%;
+  margin-top: 10px;
+  }
+.headmatter{
+  margin-top: -15px;
+  color: white;
+  font-size: 25px;
+  line-height: 2rem;
+}
+.profilephoto{
+  font-size: large;
+  margin-top: 26px;
+  margin-left: 24px;
+}
+.picture{
+  font-size: large;
+  /* margin-top: 15px;
+  margin-left: 20px; */
+}
+.logoo img{
+ margin-left: 5%;
+ width: 400px;
+ height: 20%;
+}

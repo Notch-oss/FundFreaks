@@ -1,0 +1,48 @@
+
+<p >
+    <mat-toolbar class="navbar">
+        <div class="logoo"> <img src="https://i.ibb.co/YQpsyQq/1600w-rgn-FWdqkqm-A-removebg-preview-2-1.jpg" alt="1600w-rgn-FWdqkqm-A-removebg-preview-2-1" border="0">
+            </div>
+            <span class="log">FundFreaks</span>
+    </mat-toolbar>
+  </p>
+  <div class="body1">
+<mat-card class="step1">
+    <mat-card-title class="test"> Product Details</mat-card-title>
+  </mat-card>
+  <button class="b1"  (click)="sendNotification()" mat-button>I'm Interested</button>
+
+    <div class="product">
+        <span *ngIf="product"></span>
+            <div class="info">
+                <h1 style="font-family:Fredoka One; ">Category : {{product.category}}</h1>
+                <h1 style="font-family:Fredoka One;">Estimated per share Rs. :{{product.sharePrice}}/-</h1>
+                <h1 style="font-family:Fredoka One;">Listed At : {{product.date | date:'dd-MMM-yyyy' }}</h1>
+                <h1 style="font-family:Fredoka One;">Project stage : {{product.stage}}</h1>
+                
+
+
+
+            </div>
+            <div class="productView">
+                <h1 style="font-family:Fredoka One;font-size:50px; font-weight:bolder;">{{product.title}}</h1>
+                <img [src]='image' style="width:450px;height:430px;" />
+                <button mat-raised-button color="primary" (click)="download()" style="width: 450px">Documentation +</button>
+            </div>
+            <div class="productDiscription">
+                 
+                <h1 style="font-family:Fredoka One;font-size:40px; font-weight: lighter;">Description:</h1>
+                <p class="para" style="font-family:Fredoka One;font-size:26px;">
+                    {{product.description}}
+                </p>
+                <h1 style="font-family:Fredoka One;">Business Model : {{product.businessModel}}</h1>
+                <h1 style="font-family:Fredoka One;">Owner's Name : {{product.owners}}</h1>
+                <h1 style="font-family:Fredoka One;">Owner's Email : {{product.email}}</h1>
+
+            </div>
+    </div>
+</div>
+
+                
+
+

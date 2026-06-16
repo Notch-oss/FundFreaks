@@ -1,0 +1,302 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/UserAuthentication/Users",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7035
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/UserAuthenticationService/Users",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/UserAuthentication/Register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7035
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/UserAuthenticationService/Registration",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/UserAuthentication/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7035
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/UserAuthenticationService/Login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    //EntrepreneurService
+    {
+      "DownstreamPathTemplate": "/api/GetAllProducts",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7054
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Product/GetAllProducts",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/GetProductsById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7054
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Product/GetProductById/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/CreateProduct",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7054
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Product/CreateNew",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Product/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7054
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Product/{id}",
+      "UpstreamHttpMethod": [ "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/GetAllUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7054
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/User/AllUsers",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/GetUserById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7054
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/User/UserById/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/CreateUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7054
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Users/CreateNew",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7054
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/User/{id}",
+      "UpstreamHttpMethod": [ "Put", "Delete" ]
+    },
+    //StartupRecommendationService
+    {
+      "DownstreamPathTemplate": "/api/investorRecomendation/category/{uid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7025
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/investorRecomendation/category/{uid}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/investorRecomendation/location/{uid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7025
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/investorRecomendation/location/{uid}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/investorRecomendation/stage/{uid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7025
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/investorRecomendation/stage/{uid}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/investorRecomendation/model/{uid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7025
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/investorRecomendation/model/{uid}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    //EmailService
+    {
+      "DownstreamPathTemplate": "/api/EmailOTP",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7090
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Email/EmailOTP",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmailMessage",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7090
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Email/EmailMessage",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    //ChatService
+    {
+      "DownstreamPathTemplate": "/api/Chat",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7053
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Chat",
+      "UpstreamHttpMethod": [ "Post", "Get", "Delete", "Put" ]
+    },
+    //InvestorService
+    {
+      "DownstreamPathTemplate": "/api/User/GetAll",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7295
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/User/GetAllInvestors",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/GetById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7295
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/User/GetById/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7295
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/Users/{id}",
+      "UpstreamHttpMethod": [ "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/Create",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7295
+        }
+      ],
+      //use this to find result
+      "UpstreamPathTemplate": "/User/CreateNew",
+      "UpstreamHttpMethod": [ "Post" ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+  }
+  //7054,7035,7025,7090,7295
+  //7239
+}

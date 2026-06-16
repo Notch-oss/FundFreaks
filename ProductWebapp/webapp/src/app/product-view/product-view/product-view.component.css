@@ -1,0 +1,79 @@
+.product{
+    margin-top: -60px;
+    /* margin-top: 5%; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content:space-around;
+    /* max-height: 100vh; */
+    /* margin-bottom: 1px; */
+}
+.info{
+    width :15%;
+    text-align:center;
+    /* margin-top: 250px; */
+    margin-bottom: 0px;
+    margin-left: 140px;
+    margin-right: 4px;
+}
+.productView{
+    width: 40%;
+    text-align: center; 
+    margin-bottom: 0px;  
+    margin-top: 45px;
+    margin-left: 80px;
+    
+    
+}
+.para{
+    line-height: 27px;
+   
+}
+.productDiscription{
+    margin-bottom: 40px;
+    width :35%;
+    text-align: center;
+   
+}
+.step1{
+    /* margin-top: 9px; */
+    text-align: center;
+    /* background: linear-gradient(to right, rgba(202, 18, 18, 0.5), rgba(118, 75, 162, 0.5)) */
+    background-color: #a8dadc;
+  }
+  .test{
+    font-size: 250%;
+  }
+  .navbar{
+  background-color: #011627;
+  }
+  .logoo img{
+    width: 35px;
+    margin-left: 25px; 
+}
+.log{
+    color: white;
+    margin-right: 87%;
+    font-size: larger;
+}
+/* .left{
+    width: 40%;
+    height: 500px;
+    margin-top: 50px;
+} */
+.body1{
+    background: linear-gradient(180deg, #ffffff 50%,#e9ecef 50%);
+}
+.b1{
+  
+    margin-left: 87%;
+   
+       margin-top: 50px;
+       color: white;
+      font-size: large;
+       background-color: #011627;
+     }
+     .b1:hover{
+       color: black;
+       background-color: #ef9273;
+   }

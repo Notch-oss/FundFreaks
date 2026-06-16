@@ -1,0 +1,78 @@
+<mat-card class="step">
+  <mat-card-title class="test"> {{user.name}}'s Profile</mat-card-title>
+</mat-card>
+<mat-card class="c1 mat-elevation-z-24">
+ 
+  <img class="image"  [src]='image' style="width:80%;height:300px;" />
+  <h1> {{user.profession}} </h1>
+  <mat-card-title class="x2"> Interested in </mat-card-title>
+  <p class="x1"> Category: 
+    <label class="k1"> {{user.category}} </label>
+</p>
+<p class="x1"> Model: 
+  <label class="k2"> {{user.model}} </label>
+</p>
+<p class="x1"> Location: 
+  <label class="k3"> {{user.location}} </label>
+</p>
+<p class="x1"> Stage: 
+  <label class="k4">{{user.stage}} </label>
+</p>
+<p class="x1"> Work Exp: 
+  <label class="k5"> {{user.work}} </label>
+</p>
+  
+</mat-card>
+<mat-card class="c2 mat-elevation-z-24">
+  <mat-card-title class="t1"> {{user.name}} {{user.lastName}}  </mat-card-title>
+  <mat-card-subtitle> Investor </mat-card-subtitle>
+  <p> Gender: 
+      <label class="l1"> {{user.gender}} </label>
+  </p>
+  <p> Date of Birth: 
+      <label class="l2"> {{user.dateofBirth | date:'dd-MMM-yyyy'}} </label>
+  </p>
+  <p> About: 
+      <label class="l3"> {{user.about}}</label>
+  </p>
+  <mat-divider></mat-divider>
+  <mat-card-title class="t2"> Contact Information </mat-card-title>
+  <p> Phone Number: 
+      <label class="l4"> {{user.contact}} </label>
+  </p>
+  <p> Email: 
+      <label class="l5">{{display()}} </label>
+  </p>
+  <mat-divider></mat-divider>
+  <mat-card-title class="t2"> Residential Information </mat-card-title>
+  <p> House No: 
+      <label class="l6"> {{user.houseno}} </label>
+  </p>
+  <p> Address: 
+    <label class="l8"> {{user.address}}</label>
+</p>
+<p> City: 
+    <label class="l9"> {{user.city}} </label>
+</p>
+<p> State: 
+    <label class="m1"> {{user.state}} </label>
+</p>
+<p> Pincode: 
+    <label class="m2">{{user.pincode}} </label>
+</p>
+<p> Country 
+    <label class="m3"> {{user.country}} </label>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+  
+</mat-card>

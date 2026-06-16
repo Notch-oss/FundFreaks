@@ -1,0 +1,87 @@
+<mat-card class="step1">
+  <mat-card-title class="test">Recommendations</mat-card-title>
+</mat-card>
+<mat-drawer-container class="example-container">
+ 
+  <mat-drawer mode="side" class="sidenav" opened>
+
+    <!-- <div>
+      <h1 class="types1">Category:</h1>
+      <button (click)="categoryRecomendation()" class="subtype">{{category}}</button>
+    </div>
+
+    <div>
+      <h1 class="types">Business Model:</h1>
+      <button (click)="modelRecomendation()" class="subtype">{{model}}</button>
+    </div>
+
+    <div>
+      <h1 class="types">Location:</h1>
+      <button (click)="locationRecomendation()" class="subtype">{{location}}</button>
+    </div>
+
+    <div>
+      <h1 class="types">Stage:</h1>
+      <button (click)="stageRecomendation()" class="subtype">{{stage}}</button>
+    </div> -->
+    <div class ="text">
+      <div class ="tabs" >
+        <h1 >Interested Stage:</h1>
+        <button class="button1" (click)="stageRecomendation()">{{stage}}</button>
+      </div>
+      <div class ="tabs">
+        <h1 >Interested Category:</h1>
+        <button class="button1" (click)="categoryRecomendation()">{{category}}</button>
+      </div>
+
+      <div class ="tabs">
+        <h1 >Interested Business Model:</h1>
+        <button  class="button1" (click)="modelRecomendation()">{{model}}</button>
+      </div>
+
+      <div class ="tabs">
+        <h1>Interested Location:</h1>
+        <button  class="button1" (click)="locationRecomendation()">{{location}}</button>
+      </div>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+   
+    <div class="align">
+      <!-- <div class="page1">
+          <select (change)="onPageSizeChange($event)">
+            <option *ngFor="let cards of cardsPerPages ">
+              {{cards}}
+            </option>
+          </select>
+        </div>
+        <div class = "page">
+          <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onPageChange($event)">
+          </pagination-controls>
+        </div> -->
+      <div class="product-mat-card-list">
+        <mat-list *ngFor="let product of products;let i = index">
+          <mat-list-item>
+            <mat-card class="example-card">
+
+              <mat-card-title style="font-weight: bold;text-align: center;">{{product.title}}</mat-card-title>
+              <mat-card-content style="text-align: center;">
+                <p>Category:{{product.category}}</p>
+                <p>Stage:{{product.stage}}</p>
+                <p>Business Model:{{product.businessModel}}</p>
+                <p>Location:{{product.location}}</p>
+
+              </mat-card-content>
+              <img mat-card-image [src]='images[i]' style="width:300px;height:220px;margin-left: 10px;">
+              <mat-card-actions>
+
+              </mat-card-actions>
+              <button mat-button class="button1" [routerLink]="['/viewDetails/'+ product.productId]">View
+                Details</button>
+            </mat-card>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

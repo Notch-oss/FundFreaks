@@ -1,0 +1,88 @@
+.wrap {
+    width: 99%;
+    height: 100%;
+    max-height: 100vh;
+    display: flex;
+    background-color: #011627 ;
+    flex-direction: column;
+  }
+.column{
+    width: 50%;
+}
+.form-container{
+    background-color: white;
+    height: 400px;
+    margin-right: 90px;
+    margin-top:100px
+}
+img{
+    width: 190px;
+    height: 240px;
+    margin-left:35%;
+    margin-top: 15%;
+}
+label{
+    margin-left: 25%;
+    padding-top: 20px;
+    font-size: large;
+    color: aliceblue;
+}
+h1{
+    padding-left: 50%;
+    padding-top:50px;
+    font-weight: bold;
+}
+.email{
+    padding-bottom: 30px;
+    padding-top: 15px;
+    margin-left:80px;
+    color: #011627;
+    font-size: 22px;
+    
+}
+.password{
+    font-size: medium;
+    margin-left:80px;
+    padding-bottom:20px;
+    color: #011627;
+    font-size: 22px;
+}
+
+input:hover{
+    border-radius: 7px;
+}
+.btn{
+    color: white;
+    background-color: #011627;
+    border: 0;
+    margin-left: 315px;
+    margin-top: 30px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background-color: #ef9273;
+    color: black;
+}
+a{
+    color: #2EC4B6;
+    margin-left: 300px;
+    font-size:large;
+   
+}
+.email1{
+    font-size: 18px;
+    margin-left: 116px;
+    height: 35px;
+    background-color: rgb(186, 180, 180);
+    border: #2EC4B6;
+    width: 290px;
+}
+.password1{
+    font-size: 18px;
+    margin-left: 74px;
+    height: 35px;
+    background-color: rgb(186, 180, 180);
+    border: #2EC4B6;
+    width: 290px;
+}

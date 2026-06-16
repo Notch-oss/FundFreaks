@@ -1,0 +1,37 @@
+<div class="wrap">
+    <div class="row">
+        <div class="column">
+            <div>
+                <img src="https://i.ibb.co/YQpsyQq/1600w-rgn-FWdqkqm-A-removebg-preview-2-1.jpg" alt="1600w-rgn-FWdqkqm-A-removebg-preview-2-1" border="0">
+            </div>
+            <div>
+                <label class="text-center">
+                    FundFreaks<br><br>
+                    The best Startups generally come from <br>someone needing to <br>scratch an itch.<br>
+                    -Michael Arrington, TechCrunch founder
+                </label>
+            </div>
+        </div>
+        <div class="column">
+            <div class="form-container">
+                <form #form="ngForm" (ngSubmit)="loginSubmit()">
+                 <h1>Login Here!</h1>
+                 <div style="font-weight: bold;"  >
+                 <label class="email" for="">Email :</label>
+                 <input class="email1" type="text" name="Email" [(ngModel)]="user.email">
+                 </div>
+                 <div style="font-weight: bold;"  >
+                 <label class="password" for="">Password :</label>
+                 <input class="password1" type="password" name="Password" [(ngModel)]="user.password">
+                 </div>
+                 <div class="button">
+                 <input type="button" class="btn btn-primary" (click)="loginSubmit()" value="Sign In"> 
+                 </div>
+                 <span class="fs-3">
+                    <a class="link" href="Register" ><u> Sign Up to make an account.</u></a>
+                </span>
+                </form>
+            </div>
+        </div>
+      </div>
+</div>

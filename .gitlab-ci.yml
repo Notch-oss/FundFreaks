@@ -1,0 +1,71 @@
+
+  cache:
+    key: binaries-cache
+    paths:
+      - binaries/*.apk
+      - .config
+
+
+  stages:
+  - packages
+  - test
+  - ng_quality
+
+
+
+  build_job:
+  stage: build
+  only:
+    - master
+    - v1.0.0
+    - v1.0.1
+    - v1.0.2
+    - v1.0.3
+    - stage
+  
+  script:
+    - '& "$env:NUGET_PATH" restore' 
+    - '& "$env:MSBUILD_PATH" /p:Configuration=Release' 
+ 
+  artifacts:
+    paths:
+      - '$env:EXE_RELEASE_FOLDER\YourApp.exe'  
+      - '$env:MSI_RELEASE_FOLDER\YourApp Setup.msi' 
+      - '$env:TEST_FOLDER\' 
+
+  test_job:
+    stage: test
+    only:
+     - master
+     - v1.0.0
+     - v1.0.1
+     - v1.0.2
+     - v1.0.3
+     - stage
+  
+    script:
+    - '& "$env:NUNIT_PATH" ".\$env:TEST_FOLDER\Tests.dll"'  # running NUnit tests
+    artifacts:
+    when: always 
+    paths:
+    - '.\TestResult.xml' 
+    dependencies:
+    - build_job
+
+
+  angular_lint:
+   image: node:12-alpine
+   stage: ng_quality
+   script:
+    - cd product-webapp
+    - cd webapp
+    - npm install
+    - npm run lint -- --format json
+   only:
+    - master
+    - v1.0.0
+    - v1.0.1
+    - v1.0.2
+    - v1.0.3
+    - stage
+
