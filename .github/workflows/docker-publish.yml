@@ -1,0 +1,66 @@
+name: Docker Publish
+
+# Builds a container image for each backend service and pushes it to the
+# GitHub Container Registry (ghcr.io). Uses the built-in GITHUB_TOKEN, so
+# no extra secrets are required. Images are published on pushes to main.
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  images:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: emailservice
+            context: EmailService
+            dockerfile: EmailService/EmailService/Dockerfile
+          - name: entrepreneurserviceapi
+            context: EntrePreneurServiceAPI/EntrePreneurServiceAPI
+            dockerfile: EntrePreneurServiceAPI/EntrePreneurServiceAPI/EntrePreneurServiceAPI/Dockerfile
+          - name: investor-service
+            context: Investor_Service
+            dockerfile: Investor_Service/Investor_Service/Dockerfile
+          - name: startuprecomendationservice
+            context: StartupRecomendationService
+            dockerfile: StartupRecomendationService/StartupRecomendationService/Dockerfile
+          - name: userauthenticationservice
+            context: UserAuthenticationService
+            dockerfile: UserAuthenticationService/UserAuthenticationService/Dockerfile
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lowercase registry namespace
+        id: ns
+        run: echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: ${{ matrix.context }}
+          file: ${{ matrix.dockerfile }}
+          push: true
+          tags: |
+            ghcr.io/${{ steps.ns.outputs.owner }}/${{ matrix.name }}:latest
+            ghcr.io/${{ steps.ns.outputs.owner }}/${{ matrix.name }}:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

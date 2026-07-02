@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  dotnet:
+    name: Build ${{ matrix.solution }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        solution:
+          - APIGateway/APIGateway.sln
+          - EmailService/EmailService.sln
+          - EntrePreneurServiceAPI/EntrePreneurServiceAPI/EntrePreneurServiceAPI.sln
+          - Investor_Service/Investor_Service.sln
+          - StartupRecomendationService/StartupRecomendationService.sln
+          - UserAuthenticationService/UserAuthenticationService.sln
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up .NET 6
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Restore
+        run: dotnet restore "${{ matrix.solution }}"
+
+      - name: Build (Release)
+        run: dotnet build "${{ matrix.solution }}" --configuration Release --no-restore
+
+  angular:
+    name: Build Angular webapp
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ProductWebapp/webapp
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node 16
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: ProductWebapp/webapp/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (production)
+        run: npx ng build --configuration production
