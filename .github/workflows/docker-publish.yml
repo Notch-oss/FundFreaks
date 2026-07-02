@@ -21,6 +21,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          - name: apigateway
+            context: APIGateway
+            dockerfile: APIGateway/APIGateway/Dockerfile
           - name: emailservice
             context: EmailService
             dockerfile: EmailService/EmailService/Dockerfile
