@@ -20,6 +20,5 @@ namespace Investor_Service.Models
 
         //Define a MongoCollection to represent the Users collection of MongoDB
         public IMongoCollection<User> Users { get; set; }
-        //public IMongoCollection<AppFile> AppFiles { get; set; }
     }
 }

@@ -32,7 +32,6 @@ namespace EntrePreneurServiceAPI.Models
         public string Work { get; set; }
         public string Email { get; set; }
 
-        //public List<Product> Products { get; set;
     }
     }
 

@@ -68,11 +68,6 @@ namespace EntrePreneurServiceAPI.Controllers
 
         //[HttpPost]
         //[Route("CreateProduct")]
-        //public ActionResult Create(Product product)
-        //{
-        //    Product createdProduct = _productController.Create(product);
-        //    return Created("/api/ProductCreated", createdProduct);
-        //}
 
         [HttpPut("{id}")]
         public ActionResult Put(string id, Product product)

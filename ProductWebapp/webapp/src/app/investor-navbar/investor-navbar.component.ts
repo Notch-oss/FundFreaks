@@ -23,9 +23,7 @@ export class InvestorNavbarComponent implements OnInit {
    
     this.temp=localStorage.getItem('email');
         this.name=this.temp.split('@',2)[0];
-     console.log(this.name,'name of the user');
     return this.name;
-    console.log(this.temp);
  
   }
   clearLocal(){

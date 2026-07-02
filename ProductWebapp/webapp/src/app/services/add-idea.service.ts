@@ -25,7 +25,4 @@ export class AddIdeaService {
     return this.http.get<EntrepreneurProfile>("https://localhost:7054/api/GetUserByEmail?email="+this.email);
   }
 
-  // getIdea(title:string):Observable<Product>{
-  //   return this.http.get<Product>('https://localhost:7054/api/GetProductBtTitle?title='+title);
-  // }
 }

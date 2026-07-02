@@ -58,7 +58,6 @@ namespace UserAuthenticationService.Controllers
             try
             {
                 //user email and password pattern validation
-                //_userService.FormatCheck();
                 
                 var res = await Task.Run(() => _userService.AddUser(user));
                 
@@ -84,14 +83,7 @@ namespace UserAuthenticationService.Controllers
                     return BadRequest(new { message = "User was not registered" });
                 }
 
-               // if (res > 0)
-               // { 
-               //return Ok(new { message = "User Added Successfully" });
-               //}
                // else
-               // {
-               //     return Ok(new { message = "User was not registered" });
-               // }
             }
             catch (Exception ex)
             {

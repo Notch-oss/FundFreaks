@@ -17,17 +17,13 @@ export class EntrepreneurNavbarComponent implements OnInit {
   constructor(private route : ActivatedRoute,private dataservice:ProjectIdDataService) { }
 
   ngOnInit(): void {
-    // this.productId=this.dataservice.getproductId();
     this.productId=123
-    console.log(this.productId);
-    // this.productId=this.route.snapshot.params['productId'];
   }
   display(){
 
    
     this.temp=localStorage.getItem('email');
         this.name=this.temp.split('@',2)[0];
-     console.log(this.name,'name of the user');
     return this.name;
     console.log(this.temp);}
  

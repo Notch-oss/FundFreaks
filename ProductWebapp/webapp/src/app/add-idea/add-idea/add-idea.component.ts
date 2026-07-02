@@ -67,7 +67,6 @@ projectBusinessModel:BusinessModel[]=[
     this.addIdeaService.getByEmail().subscribe((data:EntrepreneurProfile)=>{
       this.ent=data;
       this.firstName=this.ent.firstName;
-      console.log(this.firstName);
     })
     
   }
@@ -78,12 +77,10 @@ projectBusinessModel:BusinessModel[]=[
     this.selectedPdf = <File>fileInput.target.files[0];
   }
   
-    //  this.email=localStorage.getItem('email');
     
   
   addIdea() {
       this.email=localStorage.getItem('email');
-      console.log(this.product.category);
       const formData = new FormData();
       formData.append('Title', this.product.title);
       formData.append('Category', this.product.category);
@@ -102,11 +99,5 @@ projectBusinessModel:BusinessModel[]=[
       
   }
 
-//   getIdea(){
-//     this.addIdeaService.getIdea(this.product.title).subscribe((data:Product)=>{
-//       this.idea=data;
-//       console.log(this.idea);
-//   });
-// }
 
 }

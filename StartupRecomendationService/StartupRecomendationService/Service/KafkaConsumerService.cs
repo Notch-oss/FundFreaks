@@ -15,7 +15,6 @@ namespace StartupRecomendationService.Service
         private readonly string topic1 = "product";
        private readonly string topic2 = "investor";
         private readonly string groupId1 = "recomedation_group";
-       // private readonly string groupId2 = "investor4_group";
         private readonly string bootstrapServers = "localhost:9092";
 
         public KafkaConsumerService(IGraphClient client)
@@ -64,25 +63,11 @@ namespace StartupRecomendationService.Service
                         {
                             var consumer = consumerBuilder.Consume
                                (cancelToken.Token);
-                           // dynamic product1 = JObject.Parse(consumer.Message.Value);
                            
                              var product = JsonSerializer.Deserialize
                                           <Product>
                                    (consumer.Message.Value);
                            
-                           // Product product = new Product();
-                           // product.ProductId = product1.ProductId;
-                           // Console.WriteLine($"Processing Product Id:{product.ProductId}");
-                           // product.Title = product1.Title;
-                           //// product.ImageFile = product1.ImageFile;
-                           // //Console.WriteLine($"Processing Product Id:{product.ImageFile}");
-                           // product.Category = product1.Category;
-                           // product.Location = product1.Location;
-                           // product.Stage = product1.Stage;
-                           // product.SharePrice = product1.SharePrice;
-                           // product.BusinessModel = product1.BusinessModel;
-                           // product.Description = product1.Description;
-                            //Console.WriteLine($"Product : {product.ProductId}");
                             _client.Cypher.Create("(p: Product $product)")
                                            .WithParam("product", product)
                                                  .ExecuteWithoutResultsAsync();
@@ -154,7 +139,6 @@ namespace StartupRecomendationService.Service
                         {
                             var consumer = consumerBuilder.Consume
                                (cancelToken.Token);
-                            //  dynamic investor1 = JObject.Parse(consumer.Message.Value);
                             var investor1 = JsonSerializer.Deserialize
                                 <User>
                                     (consumer.Message.Value);

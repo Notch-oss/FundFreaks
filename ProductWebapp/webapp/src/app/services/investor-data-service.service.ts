@@ -10,9 +10,6 @@ export class InvestorDataServiceService {
     url = "https://localhost:7295/api/User"
     // url =  'https://localhost:7295/api/User/GetById'
   constructor(private http: HttpClient) { }
-  // users() {
-  //   return this.http.get(this.url)
-  // }
   getOne(id:string): Observable<any> {
     return this.http.get('https://localhost:7295/api/User/GetById?id='+id);
   }

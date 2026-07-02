@@ -43,11 +43,6 @@ namespace EntrePreneurServiceAPI.Controllers
 
         //[HttpPost]
         //[Route("CreateUser")]
-        //public ActionResult Create(User user)
-        //{
-        //    User createdUser = _userController.Create(user);
-        //    return Created("/api/UserCreated", createdUser);
-        //}
 
         [HttpPut("{id:length(24)}")]
         public ActionResult Put(string id, User user)
@@ -131,7 +126,6 @@ namespace EntrePreneurServiceAPI.Controllers
                         };
 
                         User ent=_userController.Create(file);
-                        //context.SaveChanges();
                         return Ok(ent);
                     }
                     else

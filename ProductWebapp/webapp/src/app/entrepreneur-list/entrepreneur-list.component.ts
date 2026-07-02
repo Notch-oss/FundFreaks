@@ -27,7 +27,6 @@ public i : number=0;
   ngOnInit(): void {
     this.listService.getAll().subscribe((data:Array<EntrepreneurProfile>)=>{
       this.entrepreneurs=data;
-      console.log(this.entrepreneurs);
       this.entrepreneurs.forEach(element =>{
         let objectURL = 'data:image/png;base64,'+ element.img;
         this.images[this.i]=this.sanitizer.bypassSecurityTrustUrl(objectURL);

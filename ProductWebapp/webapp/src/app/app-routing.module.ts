@@ -61,7 +61,6 @@ const routes:Routes=[
       {path:'YourProjects',component:YourProjectsComponent,canActivate : [AuthenticationGuard]}
 
     
-      //{path:'InvestorList',component:} 
       //{path:'EntrepreneurList',component:
     ]
   }
@@ -69,7 +68,6 @@ const routes:Routes=[
 ]
 
      
-      //{path:'InvestorList',component:} 
       //{path:'EntrepreneurList',component:
     
 

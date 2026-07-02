@@ -32,9 +32,6 @@ export class RegisterComponent implements OnInit {
     
   }  
   //to check if entry is coming to console
-  // registerSubmit(){
-  //   console.log(this.user)
-  // }
 
   //to add in db
   /*registerSubmit(){
@@ -59,10 +56,8 @@ export class RegisterComponent implements OnInit {
    .subscribe(
        res=>{
         localStorage.setItem('email',res.email)
-        //  console.log(res)
          localStorage.setItem('token',res.token)
         localStorage.setItem('role',this.user.role)
-        console.log(res)
 
         let temp=res.role;
          if(this.user.role=='Investor'){
@@ -73,7 +68,6 @@ export class RegisterComponent implements OnInit {
 
         
          
-         //this._router.navigate(['/InvestorNavbar/HappyCustomer'])
          
        }
       }

@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
  
 
   /*loginSubmit(){
-    console.log(this.loginForm.value);
     this.loginForm.reset();
   }*/
 
@@ -39,7 +38,6 @@ export class LoginComponent implements OnInit {
     .subscribe(
       res=>{
         localStorage.setItem('email',res.email)
-        console.log(res)
         localStorage.setItem('token',res.token)
 
         if(res.role=='Investor'){

@@ -30,10 +30,6 @@ interface Qualifications{
 })
 export class EntrepreneurProfileComponent implements OnInit {
 entrepreneur:EntrepreneurProfile;
-// firstFormGroup !: FormGroup;
-// secondFormGroup !: FormGroup;
-// thirdFormGroup !:FormGroup;
-// isEditable = false ;
 Gender: string[] = ['Male', 'Female', 'Others'];
 foods: Experience[] = [
   {value: 'less than 1 year', viewValue: '<1 year'},

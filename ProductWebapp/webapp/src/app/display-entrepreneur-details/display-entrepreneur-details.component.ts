@@ -38,7 +38,6 @@ export class DisplayEntrepreneurDetailsComponent implements OnInit {
           }
         },
         error: (error) => {
-          console.error('Error loading entrepreneur details:', error);
         }
       });
     }

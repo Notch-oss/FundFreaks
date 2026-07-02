@@ -13,9 +13,6 @@ export class HappyCustomerService {
   constructor(private http:HttpClient) { }
 
   
-  // addUsername(user:happyCustomer):Observable<happyCustomer>{
-  //   return this.http.post<happyCustomer>('',user)
-  // }
 
   
 }

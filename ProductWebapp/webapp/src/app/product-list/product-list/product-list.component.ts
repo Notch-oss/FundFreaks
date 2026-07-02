@@ -60,6 +60,5 @@ public i : number=0;
     this.notification.emailBody=this.name+ " is interested on your idea. Investor emailId :"+this.temp;
   
     this.emailService.sendNotification(this.notification).subscribe(res=>{console.log(res);this.notification={userEmailId:'',emailBody:''}})
-    console.log(this.notification);
   }
 }

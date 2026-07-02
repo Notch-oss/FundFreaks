@@ -10,11 +10,9 @@
         public string SharePrice { get; set; }
         public string BusinessModel { get; set; }
         public string Description { get; set; }
-       // public DateTime Date { get; set; } = DateTime.Now;
        
         public IFormFile ImageFile { get; set; }
        public IFormFile PdfFile { get; set; }
-        // public List<IFormFile> Files { get; set; }
         public string Email { get; set; }
     }
 }

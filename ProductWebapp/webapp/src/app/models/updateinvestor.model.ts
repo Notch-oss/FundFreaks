@@ -8,10 +8,8 @@ export class Inv{
     dateofBirth:string
     email:string;
     file:File
-    // profileimg:Byte;
     
 
-    // profileimg:Byte;
 
     houseno: string 
     streetno: string 

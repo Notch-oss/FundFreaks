@@ -46,16 +46,9 @@ export class UpdateInvestorProfileComponent implements OnInit {
 
   
   firstFormGroup !: FormGroup;
-  // secondFormGroup !: FormGroup;
-  // thirdFormGroup !: FormGroup;
-  // title='investordetails';
-  // cards: Card[] = [];
-  // card: Card = {
   //   name: '',
-  // }
 
 
-  // isLinear = true;
   Gender: string| undefined;
   gender: string[] = ['Male', 'Female', 'Other'];
   foods: Experience[] = [
@@ -185,7 +178,6 @@ export class UpdateInvestorProfileComponent implements OnInit {
       // image:['',Validators.required]
 
     });
-  //   this.secondFormGroup = this.formBuilder.group({
   //     houseno: ['', Validators.required],
   //     streetno: ['', Validators.required],
   //     address: ['', Validators.required],
@@ -193,8 +185,6 @@ export class UpdateInvestorProfileComponent implements OnInit {
   //     pincode: ['', Validators.required],
   //     state: ['', Validators.required],
   //     country: ['', Validators.required]
-  //   });
-  //   this.thirdFormGroup=this.formBuilder.group({
   //     education: ['', Validators.required],
   //     about: ['', Validators.required],
   //     work: ['', Validators.required],
@@ -202,7 +192,6 @@ export class UpdateInvestorProfileComponent implements OnInit {
   //     location: ['', Validators.required],
   //     stage: ['', Validators.required],
   //     model: ['', Validators.required]
-  // });
 }
 
 
@@ -212,7 +201,6 @@ onSelectImg(fileInput: any) {
 
   addInv(){
     this.email=localStorage.getItem('email');
-    console.log(this.inv.category);
       const formData = new FormData();
       formData.append('Name', this.inv.name);
       formData.append('LastName', this.inv.lastname);
@@ -243,11 +231,6 @@ onSelectImg(fileInput: any) {
       this.interestedLocation = data.location;
       this.interestedStage = data.stage;
       this.interestedModel = data.model;
-      // this.sharedData.setInvestorId(this.investorId);
-      // this.sharedData.setCategory(this.interestedCategory);
-      // this.sharedData.setLocation(this.interestedLocation);
-      // this.sharedData.setModel(this.interestedModel);
-      // this.sharedData.setStage(this.interestedStage);
       });
      this.inv = new Inv();
   

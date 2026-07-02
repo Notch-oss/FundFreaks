@@ -38,7 +38,6 @@ export class HomepageComponent implements OnInit {
       'assets/images/crowdfunding.png',
       imageAlt: 'person1',
     },
-    // {
     //   imageSrc:
     //   'assets/images/crowdfunding.png',
     //   imageAlt: 'person2',

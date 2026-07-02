@@ -71,11 +71,6 @@ namespace Investor_Service.Controllers
 
         //[HttpPost]
         //[Route("Create")]
-        //public ActionResult Create(User user)
-        //{
-        //    User createdUser = _investorService.Create(user);
-        //    return Created("/api/created", createdUser);
-        //}
 
         [HttpPut("{id}")]
         public ActionResult Put(string id, User user)
@@ -167,19 +162,9 @@ namespace Investor_Service.Controllers
                     }
                 }
 
-                //var user = context.Users
-                //    .Find(c => c.Name == fileviewmodel.Name).FirstOrDefault();
-                ////.(c => new ReturnData()
-                ////{
                 ////    Name = c.Name,
-                ////    ImageBase64 = String.Format("data:image/png;base64,{0}", Convert.ToBase64String(c.Content))
-                ////}).FirstOrDefault();
-                //var returnData = new ReturnData();
-                //returnData.Name = user.Name;
-                //returnData.ImageBase64 = String.Format("data:image/png;base64,{0}", Convert.ToBase64String(user.File));
 
 
-                //return Ok(returnData);
             }
             return Ok("Invalid");
         }

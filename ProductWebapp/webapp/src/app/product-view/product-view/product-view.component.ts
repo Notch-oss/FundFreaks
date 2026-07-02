@@ -35,7 +35,6 @@ export class ProductViewComponent implements OnInit {
     this.productService.getProduct(this.productId).subscribe(
       (data: Product) => {
         this.product = data;
-      //  console.log(this.product);
         let objectURL = 'data:image/png;base64,' + this.product.imageFile;
         this.image = this.sanitizer.bypassSecurityTrustUrl(objectURL);  
         }  
@@ -44,10 +43,8 @@ export class ProductViewComponent implements OnInit {
   download() {
        this.productService.downloadpdf(this.productId).subscribe(
         response =>{
-       // let blob:Blob = response.body as Blob;
           const blob = new Blob([(response as any).body], {type: 'application/pdf'});
           const fileName ='documentation.pdf'
-          // saveAs(blob,fileName)
           let a = document.createElement('a');
           a.download=fileName;
           a.href= window.URL.createObjectURL(blob);
@@ -62,6 +59,5 @@ export class ProductViewComponent implements OnInit {
       this.notification.emailBody=this.name+ " is interested on your idea. Investor emailId :"+this.temp;
     
       this.emailService.sendNotification(this.notification).subscribe(res=>{console.log(res);this.notification={userEmailId:'',emailBody:''}})
-      console.log(this.notification);
     }
 }

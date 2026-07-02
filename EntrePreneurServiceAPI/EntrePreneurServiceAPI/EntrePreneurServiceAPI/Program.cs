@@ -16,11 +16,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.Configure<EntrePreneurDatabaseSetting>(
                 builder.Configuration.GetSection("EntrePreneurDatabaseSetting"));
 
-//builder.Services.AddSingleton<IEntrePreneurDatabaseSetting>(sp =>
-   // sp.GetRequiredService<IOptions<EntrePreneurDatabaseSetting>>().Value);
 
-//builder.Services.AddSingleton<IMongoClient>(s =>
-      //  new MongoClient(builder.Configuration.GetValue<string>("EntrePreneurDatabaseSetting:ConnectionString")));
 
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -29,11 +25,7 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.Configure<ProductDatabaseSetting>(
                 builder.Configuration.GetSection("ProductDatabaseSetting"));
 builder.Services.AddDiscoveryClient();
-//builder.Services.AddSingleton<IProductDatabaseSetting>(sp =>
-// sp.GetRequiredService<IOptions<ProductDatabaseSetting>>().Value);
 
-//builder.Services.AddSingleton<IMongoClient>(s =>
-//  new MongoClient(builder.Configuration.GetValue<string>("ProductDatabaseSetting:ConnectionString")));
 var Default = "_default";
 
 builder.Services.AddCors((setup) =>

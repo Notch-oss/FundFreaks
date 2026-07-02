@@ -18,7 +18,6 @@ namespace StartupRecomendationService.Repository
         {
             var products = await _client.Cypher.Match("(i:User)-[rel:sameCategory]->(p:Product)")
                                                    .Where((User i) => i.Id == uid).Return(p => p.As<Product>()).ResultsAsync;
-            //dynamic jo = JObject.Parse(products.ToString());
             return products;
         }
         public async Task<IEnumerable<Product>> RecomendationByLocation(string uid)

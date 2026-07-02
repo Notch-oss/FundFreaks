@@ -28,7 +28,6 @@ investorId :any;
   cardsPerPage:number=1;
   cardsPerPages :any=[1,2,3];
   public product:Product;
-  //public  = RecomendationProduct;
 public images : any [];
 public i : number=0;
   recomendationProducts: RecomendationProduct[];
@@ -44,7 +43,6 @@ public i : number=0;
     this.images = [];
     this.product = new Product();
     this.inv =new Inv();
-    //this.recomendedProduct = new RecomendationProduct();
 
   }
 
@@ -53,16 +51,6 @@ public i : number=0;
     this.images=[];
     this.products=[];
     this.recomendationProducts =[];
-    // this.productService.getAllProducts().subscribe((data:Array<Product>)=>{
-    //   this.products=[];
-    //   this.products=data;
-    //   this.products.forEach(element => {
-    //     let objectURL = 'data:image/png;base64,' + element.imageFile;
-    //      this.images[this.i] =  this.sanitizer.bypassSecurityTrustUrl(objectURL); 
-    //      this.i++;
-    //   });
-    // })
-    // this.i=0;
   this.productService.getInvestorByEmail().subscribe((data:Inv)=>{
     this.inv = data;
     this.investorId= this.inv.id;
@@ -71,7 +59,6 @@ public i : number=0;
     this.location = this.inv.location;
     this.stage = this.inv.stage;
     this.model = this.inv.model;
-     console.log((this.investorId));
   })
 
  
@@ -91,13 +78,10 @@ public i : number=0;
     this.ngOnInit();
     this.images=[];
     this.products=[];
-   //  console.log(this.products);
     this.i =0;
-     console.log(this.i);
     this.recomendationProducts =[];
     this.recommendationdata.categoryRecomendation(this.investorId).subscribe((data:Array<RecomendationProduct>)=>{
       this.recomendationProducts=data;
-       console.log(this.recomendationProducts);
       this.i=0;
       this.products=[];
       this.categoryProducts=[];
@@ -106,7 +90,6 @@ public i : number=0;
         this.productId = element.productId;
        this.productService.getProduct(this.productId).subscribe((data:Product)=>{
         this.product=data;
-         console.log(this.product);
         let objectURL = 'data:image/png;base64,' + this.product.imageFile;
         this.images[this.i] =  this.sanitizer.bypassSecurityTrustUrl(objectURL); 
         this.categoryProducts[this.i] = this.product;
@@ -117,7 +100,6 @@ public i : number=0;
        this.products =[];
        this.products=this.categoryProducts;
       });
-       console.log(this.categoryProducts);
      } );
     
   }
@@ -125,13 +107,10 @@ public i : number=0;
     this.ngOnInit();
     this.images=[];
     this.products=[];
-    // console.log(this.products);
     this.i =0;
-     console.log(this.i);
     this.recomendationProducts =[];
     this.recommendationdata.locationRecomendation(this.investorId).subscribe((data:Array<RecomendationProduct>)=>{
       this.recomendationProducts=data;
-       console.log(this.recomendationProducts);
       this.i=0;
      this.products=[];
      this.locationProducts=[];
@@ -140,7 +119,6 @@ public i : number=0;
         this.productId = element.productId;
        this.productService.getProduct(this.productId).subscribe((data:Product)=>{
         this.product=data;
-         console.log(this.product);
         let objectURL = 'data:image/png;base64,' + this.product.imageFile;
         this.images[this.i] =  this.sanitizer.bypassSecurityTrustUrl(objectURL); 
         this.locationProducts[this.i] = this.product;
@@ -151,7 +129,6 @@ public i : number=0;
        this.products=[];
        this.products = this.locationProducts;
       });
-       console.log(this.products);
      } );
     
   }
@@ -160,13 +137,10 @@ public i : number=0;
     this.images=[];
     this.products=[];
     this.stageProducts=[];
-    // console.log(this.products);
     this.i =0;
-     console.log(this.i);
     this.recomendationProducts =[];
     this.recommendationdata.stageRecomendation(this.investorId).subscribe((data:Array<RecomendationProduct>)=>{
       this.recomendationProducts=data;
-       console.log(this.recomendationProducts);
       this.i=0;
       this.products=[];
       this.stageProducts=[];
@@ -175,7 +149,6 @@ public i : number=0;
         this.productId = element.productId;
        this.productService.getProduct(this.productId).subscribe((data:Product)=>{
         this.product=data;
-         console.log(this.product);
         let objectURL = 'data:image/png;base64,' + this.product.imageFile;
         this.images[this.i] =  this.sanitizer.bypassSecurityTrustUrl(objectURL); 
         this.stageProducts[this.i] = this.product;
@@ -186,7 +159,6 @@ public i : number=0;
        this.products =[];
        this.products=this.stageProducts;
       });
-       console.log(this.products);
      } );
     
   }
@@ -195,13 +167,10 @@ public i : number=0;
     this.images=[];
     this.products=[];
     this.modelProducts=[];
-    // console.log(this.products);
     this.i =0;
-     console.log(this.i);
     this.recomendationProducts =[];
     this.recommendationdata.modelRecomendation(this.investorId).subscribe((data:Array<RecomendationProduct>)=>{
       this.recomendationProducts=data;
-       console.log(this.recomendationProducts);
       this.i=0;
       this.products=[];
       this.modelProducts=[];
@@ -210,7 +179,6 @@ public i : number=0;
         this.productId = element.productId;
        this.productService.getProduct(this.productId).subscribe((data:Product)=>{
         this.product=data;
-         console.log(this.product);
         let objectURL = 'data:image/png;base64,' + this.product.imageFile;
         this.images[this.i] =  this.sanitizer.bypassSecurityTrustUrl(objectURL); 
         this.modelProducts[this.i] = this.product;
@@ -221,7 +189,6 @@ public i : number=0;
        this.products=[];
        this.products=this.modelProducts;
       });
-       console.log(this.products);
      } );
     
   }
